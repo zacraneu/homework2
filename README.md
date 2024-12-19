@@ -7,7 +7,7 @@
 Программа загружает зависимости пакетов из JSON файла, строит граф зависимостей и сохраняет его в файл `.dot`. Затем этот файл можно использовать для генерации изображения с помощью утилиты Graphviz.
 
 Основные функции программы:
-- Загрузка зависимостей из JSON файла
+- Загрузка зависимостей из JSON файла по URL
 - Рекурсивный сбор зависимостей с ограничением по глубине
 - Генерация графа в формате Graphviz
 - Сохранение графа в файл `.dot`
@@ -29,35 +29,19 @@ python visualize_dependencies.py <path_to_dot> <package_name> <output_dot_file> 
 <package_name>: Название пакета, зависимости которого нужно визуализировать.
 <output_dot_file>: Путь к файлу для сохранения кода Graphviz (например, output.dot).
 <max_depth>: Максимальная глубина рекурсии для получения зависимостей (например, 2).
-<dependencies_file>: Путь к JSON файлу с зависимостями.
 ```
 Пример команды
 ```bash
-python visualize_dependencies.py "/path/to/graphviz/dot" "packageA" "output.dot" 2 "dependencies.json"
+python visualize_dependencies.py "/path/to/graphviz/dot" "packageA" "output.dot" 2 "URL"
 ```
 После выполнения команды программа:
-Загрузит зависимости из файла dependencies.json.
+Загрузит зависимости из файла json по URL.
 Построит граф зависимостей для пакета packageA до глубины 2.
 Сохранит описание графа в файл output.dot.
 Сгенерирует изображение в формате PNG (файл будет иметь имя output.png).
 Программа выведет сообщение:
 ```mathematica
 Graph generated successfully! Image saved to output.png
-```
-Пример JSON файла с зависимостями
-Пример структуры JSON файла с зависимостями:
-
-```json
-{
-  "packageA": {
-    "dependencies": {
-      "packageB": {}
-    }
-  },
-  "packageB": {
-    "dependencies": {}
-  }
-}
 ```
 Тесты
 Проект включает набор юнит-тестов, написанных с использованием unittest для проверки всех ключевых функций программы.
