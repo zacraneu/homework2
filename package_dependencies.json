@@ -1,0 +1,170 @@
+{
+  "lodash": {
+    "dependencies": {
+      "other-package": {
+        "dependencies": {
+          "sub-package": {},
+          "sub-package-2": {
+            "dependencies": {
+              "deep-package": {
+                "dependencies": {
+                  "deep-deep-package": {}
+                }
+              }
+            }
+          },
+          "sub-package-4": {
+            "dependencies": {
+              "deep-package-2": {
+                "dependencies": {
+                  "extra-package": {}
+                }
+              }
+            }
+          },
+          "sub-package-6": {}
+        }
+      },
+      "another-package": {
+        "dependencies": {
+          "sub-package-3": {
+            "dependencies": {
+              "deep-sub-package": {}
+            }
+          },
+          "sub-package-7": {
+            "dependencies": {
+              "sub-sub-package": {}
+            }
+          }
+        }
+      },
+      "yet-another-package": {
+        "dependencies": {
+          "sub-package-5": {
+            "dependencies": {
+              "super-deep-package": {}
+            }
+          }
+        }
+      },
+      "extended-package": {
+        "dependencies": {
+          "sub-package-8": {
+            "dependencies": {
+              "super-deep-package-2": {}
+            }
+          },
+          "sub-package-9": {}
+        }
+      }
+    }
+  },
+  "other-package": {
+    "dependencies": {
+      "sub-package": {
+        "dependencies": {
+          "sub-sub-package": {
+            "dependencies": {
+              "super-sub-package": {}
+            }
+          }
+        }
+      },
+      "sub-package-6": {
+        "dependencies": {
+          "sub-package-8": {}
+        }
+      }
+    }
+  },
+  "another-package": {
+    "dependencies": {
+      "sub-package-3": {
+        "dependencies": {
+          "deep-sub-package": {
+            "dependencies": {
+              "extra-deep-package": {}
+            }
+          }
+        }
+      },
+      "sub-package-7": {
+        "dependencies": {
+          "sub-sub-package": {
+            "dependencies": {
+              "super-sub-package-2": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "sub-package": {
+    "dependencies": {
+      "sub-sub-package": {}
+    }
+  },
+  "sub-package-2": {
+    "dependencies": {
+      "deep-package": {}
+    }
+  },
+  "sub-package-3": {
+    "dependencies": {
+      "deep-sub-package": {}
+    }
+  },
+  "sub-package-4": {
+    "dependencies": {
+      "deep-package-2": {}
+    }
+  },
+  "sub-package-5": {
+    "dependencies": {
+      "super-deep-package": {}
+    }
+  },
+  "sub-package-6": {
+    "dependencies": {}
+  },
+  "sub-package-7": {
+    "dependencies": {}
+  },
+  "sub-package-8": {
+    "dependencies": {}
+  },
+  "sub-package-9": {
+    "dependencies": {}
+  },
+  "sub-sub-package": {
+    "dependencies": {}
+  },
+  "deep-package": {
+    "dependencies": {}
+  },
+  "deep-package-2": {
+    "dependencies": {}
+  },
+  "deep-sub-package": {
+    "dependencies": {}
+  },
+  "super-deep-package": {
+    "dependencies": {}
+  },
+  "super-deep-package-2": {
+    "dependencies": {}
+  },
+  "extra-package": {
+    "dependencies": {}
+  },
+  "extra-deep-package": {
+    "dependencies": {}
+  },
+  "super-sub-package": {
+    "dependencies": {}
+  },
+  "super-sub-package-2": {
+    "dependencies": {}
+  }
+}
